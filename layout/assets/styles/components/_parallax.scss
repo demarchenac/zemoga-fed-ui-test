@@ -1,6 +1,6 @@
 @import '../abstracts/variables';
 
-.gallery-rulers {
+.parallax {
 	position: absolute;
 	top: calc(
 		#{$IMAGE_SIZE} - calc(#{$IMAGE_SIZE} - #{$CARD_SPACER} - #{$CARD_HEIGHT} -

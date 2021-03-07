@@ -24,9 +24,18 @@ i:hover {
 }
 
 a,
-h1,
 button {
   all: unset;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }
 
 @font-face {
@@ -94,7 +103,81 @@ button {
   font-style: italic;
 }
 
-.gallery-rulers {
+.callout {
+  margin: 70px 10%;
+  width: calc(100% - 10% * 2);
+  height: 300px;
+}
+
+.callout__content {
+  position: relative;
+  padding: 30px;
+  background-color: #ebebeb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.content__title {
+  width: 20%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content__description {
+  width: 75%;
+  height: 100%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.content__description p {
+  font-size: 1.3333rem;
+  font-weight: 400;
+}
+
+.content__close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  width: 5%;
+  height: 100%;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.content__close span {
+  cursor: pointer;
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+
+.title__sub-heading h3 {
+  font-size: 1.75rem;
+  font-weight: 300;
+}
+
+.title__heading h3 {
+  font-size: 2.6667rem;
+  font-weight: 700;
+}
+
+.parallax {
   position: absolute;
   top: calc( 74.5rem - calc(74.5rem - 170px - 500px - 300px - 70px));
   width: 100%;
@@ -102,7 +185,7 @@ button {
 }
 
 @media only screen and (max-height: 950px) {
-  .gallery-rulers {
+  .parallax {
     top: calc( 74.5rem - calc(74.5rem - 170px - 500px - 30px - 70px));
   }
 }
@@ -229,6 +312,7 @@ button {
 }
 
 .main-ruling-actions__upvote {
+  cursor: pointer;
   background-color: rgba(28, 187, 180, 0.75);
   -ms-flex-item-align: end;
       align-self: flex-end;
@@ -240,11 +324,18 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   font-size: 2.6667rem;
   font-weight: 400;
 }
 
+.main-ruling-actions__upvote:hover {
+  background-color: #1cbbb4;
+}
+
 .main-ruling-actions__downvote {
+  cursor: pointer;
   background-color: rgba(255, 173, 29, 0.75);
   -ms-flex-item-align: center;
       align-self: center;
@@ -256,8 +347,14 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   font-size: 2.6667rem;
   font-weight: 400;
+}
+
+.main-ruling-actions__downvote:hover {
+  background-color: #ffad1d;
 }
 
 .main-ruling__remaining-time {

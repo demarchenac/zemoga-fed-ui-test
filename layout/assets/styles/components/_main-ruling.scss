@@ -19,7 +19,7 @@
 	&__content {
 		position: relative;
 		top: $CARD_SPACER;
-		left: 10%;
+		left: $PAGE_SPACER;
 		width: 39%;
 		height: $CARD_HEIGHT;
 		background: inherit;
@@ -94,16 +94,23 @@
 		justify-content: center;
 
 		&__upvote {
+			cursor: pointer;
 			background-color: map-get($map: $COLORS_WITH_APLHA, $key: 'upvote');
 			align-self: flex-end;
 			padding: 20px;
 			width: 50%;
 			display: flex;
 			justify-content: center;
+			transition: 0.5s;
 			@include adapt-font('lg', 'regular');
+
+			&:hover {
+				background-color: map-get($map: $COLORS, $key: 'upvote');
+			}
 		}
 
 		&__downvote {
+			cursor: pointer;
 			background-color: map-get(
 				$map: $COLORS_WITH_APLHA,
 				$key: 'downvote'
@@ -113,7 +120,12 @@
 			width: 50%;
 			display: flex;
 			justify-content: center;
+			transition: 0.5s;
 			@include adapt-font('lg', 'regular');
+
+			&:hover {
+				background-color: map-get($map: $COLORS, $key: 'downvote');
+			}
 		}
 	}
 
