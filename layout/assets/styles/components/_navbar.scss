@@ -1,0 +1,64 @@
+@import '../abstracts/variables';
+
+.navbar {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	// color: rgb(255, 255, 255);
+
+	&__title {
+		font-size: 32pt;
+
+		flex-basis: 100%;
+		flex: 1;
+	}
+
+	&__list {
+		list-style: none;
+
+		display: flex;
+		flex-direction: row;
+		flex-basis: 100%;
+		flex: 1;
+	}
+
+	&__item {
+		text-decoration: none;
+		font-size: 16pt;
+		line-height: 16pt;
+
+		display: flex;
+		flex-direction: row;
+		flex-basis: 100%;
+		flex: 1;
+
+		a {
+			color: map-get($map: $COLORS, $key: 'text');
+			transition: 2s;
+
+			&:visited {
+				text-decoration: none;
+				color: map-get($map: $COLORS, $key: 'text');
+			}
+
+			&:focus {
+				text-decoration: none;
+				color: map-get($map: $COLORS, $key: 'text');
+			}
+
+			&:hover,
+			&:active {
+				color: map-get($map: $COLORS, $key: 'text');
+				cursor: pointer;
+				text-decoration: underline;
+			}
+		}
+		i {
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+}

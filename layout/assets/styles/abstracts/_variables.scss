@@ -1,0 +1,31 @@
+$COLORS: (
+	'upvote': rgb(28, 187, 180),
+	'downvote': rgb(255, 173, 29),
+	'text': rgb(0, 0, 0),
+);
+
+$COLOR_OPACITY: 0.7;
+
+$COLORS_WITH_APLHA: (
+	'upvote': rgba(28, 187, 180, $COLOR_OPACITY),
+	'downvote': rgba(255, 173, 29, $COLOR_OPACITY),
+);
+
+$DOWNWARD_GRADIENT: linear-gradient(
+	0deg,
+	rgba(51, 51, 51, 0) 0%,
+	rgba(51, 51, 51, 1) 100%
+);
+
+$UPWARD_GRADIENT: linear-gradient(
+	180deg,
+	rgba(0, 0, 0, 0) 100%,
+	rgba(0, 0, 0, 0) 75%,
+	rgba(0, 0, 0, 0.61) 38%,
+	rgba(0, 0, 0, 0.71) 0%
+);
+
+$GRANDIENT: (
+	'up': $UPWARD_GRADIENT,
+	'down': $DOWNWARD_GRADIENT,
+);
