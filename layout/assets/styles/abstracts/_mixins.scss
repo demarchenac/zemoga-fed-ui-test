@@ -1,0 +1,8 @@
+@import '../abstracts/variables';
+
+@mixin adapt-font($size: 'md', $weight: 'medium') {
+	font: {
+		size: map-get($FONT_SIZES, $size);
+		weight: map-get($FONT-WEIGHTS, $weight);
+	}
+}

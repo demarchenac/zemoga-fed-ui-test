@@ -9,7 +9,7 @@
 		<title>Layout</title>
 	</head>
 	<body>
-		<nav class="navbar">
+		<nav class="navbar navbar--transparent">
 			<h1 class="navbar__title">Rule of Thumb.</h1>
 			<ul class="navbar__list">
 				<li class="navbar__item">
@@ -28,10 +28,69 @@
 		</nav>
 		<main>
 			<!-- Main votes or ruling -->
-			<section></section>
+			<section class="main-ruling">
+				<div class="main-ruling__content">
+					<div class="main-ruling-card">
+						<div class="main-ruling-card__content">
+							<span class="main-ruling-card__question">
+								What's your opinion on?
+							</span>
+							<h2 class="main-ruling-card__character">
+								Pope Francis?
+							</h2>
+							<p class="main-ruling-card__summary">
+								He’s talking tough on clergy sexual abuse, but
+								is he just another papal pervert protector?
+								(thumbs down) or a true pedophile punishing
+								pontiff? (thumbs up)
+							</p>
+
+							<p class="main-ruling-card__related">
+								<i class="fab fa-wikipedia-w"></i>
+								<a>More information</a>
+							</p>
+
+							<h3 class="main-ruling-card__callout">
+								What's your veredict?
+							</h3>
+						</div>
+					</div>
+					<div class="main-ruling-actions">
+						<div class="main-ruling-actions__upvote">
+							<i class="fas fa-thumbs-up"></i>
+						</div>
+						<div class="main-ruling-actions__downvote">
+							<i class="fas fa-thumbs-down"></i>
+						</div>
+					</div>
+				</div>
+				<div class="main-ruling__remaining-time">
+					<div class="remaining-time__label">
+						<span>CLOSING IN</span>
+					</div>
+					<div class="remaining-time__time-left">
+						<div class="time-left__separator">
+							<div></div>
+							<div class="time-left__separator--triangle"></div>
+							<div></div>
+						</div>
+						<div class="time-left__duration">
+							<span><b>22</b> days</span>
+						</div>
+					</div>
+				</div>
+			</section>
 
 			<!-- Gallery votes or rulers -->
-			<section></section>
+			<section class="gallery-rulers">
+				<div
+					style="
+						height: 300px;
+						width: 100%;
+						background-color: transparent;
+					"
+				></div>
+			</section>
 		</main>
 	</body>
 </html>

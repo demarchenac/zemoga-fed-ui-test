@@ -1,10 +1,28 @@
+$DEFAULT_FONT_SIZE: 62.5%;
+
+$FONT-WEIGHTS: (
+	'bold': 700,
+	'regular': 400,
+	'light': 300,
+	'thin': 100,
+);
+
+$FONT_SIZES: (
+	'xs': 0.75rem,
+	'sm': 1.3333rem,
+	'md': 1.75rem,
+	'lg': 2.6667rem,
+	'xl': 5rem,
+);
+
 $COLORS: (
 	'upvote': rgb(28, 187, 180),
 	'downvote': rgb(255, 173, 29),
-	'text': rgb(0, 0, 0),
+	'text': rgb(255, 255, 255),
+	'background': rgb(255, 255, 255),
 );
 
-$COLOR_OPACITY: 0.7;
+$COLOR_OPACITY: 0.75;
 
 $COLORS_WITH_APLHA: (
 	'upvote': rgba(28, 187, 180, $COLOR_OPACITY),
@@ -29,3 +47,10 @@ $GRANDIENT: (
 	'up': $UPWARD_GRADIENT,
 	'down': $DOWNWARD_GRADIENT,
 );
+
+$IMAGE_SIZE: 74.5rem;
+$CARD_SPACER: 170px;
+$CARD_HEIGHT: 500px;
+$REMAINING_TIME_SPACER: 300px;
+$REMAINING_TIME_SPACER_MINI: 30px;
+$REMAINING_TIME_HEIGHT: 70px;

@@ -5,14 +5,20 @@
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	padding: 30px 10%;
+	height: 120px;
+	width: 100%;
+	z-index: 10;
 
-	// color: rgb(255, 255, 255);
-
+	/* Elements */
 	&__title {
-		font-size: 32pt;
-
 		flex-basis: 100%;
 		flex: 1;
+		color: map-get($map: $COLORS, $key: 'text');
+		@include adapt-font('lg', 'regular');
 	}
 
 	&__list {
@@ -26,17 +32,15 @@
 
 	&__item {
 		text-decoration: none;
-		font-size: 16pt;
-		line-height: 16pt;
-
 		display: flex;
-		flex-direction: row;
+		flex-direction: row-reverse;
 		flex-basis: 100%;
 		flex: 1;
 
+		@include adapt-font('sm', 'regular');
+
 		a {
 			color: map-get($map: $COLORS, $key: 'text');
-			transition: 2s;
 
 			&:visited {
 				text-decoration: none;
@@ -55,10 +59,10 @@
 				text-decoration: underline;
 			}
 		}
-		i {
-			&:hover {
-				cursor: pointer;
-			}
-		}
+	}
+
+	/* Modifiers */
+	&--transparent {
+		background: map-get($map: $GRANDIENT, $key: 'down');
 	}
 }

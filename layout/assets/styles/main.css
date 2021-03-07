@@ -8,7 +8,14 @@ body {
 
 body {
   font-family: Lato, Arial, Helvetica, sans-serif;
-  margin: 30px 120px;
+}
+
+i {
+  color: white;
+}
+
+i:hover {
+  cursor: pointer;
 }
 
 * {
@@ -87,6 +94,271 @@ button {
   font-style: italic;
 }
 
+.gallery-rulers {
+  position: absolute;
+  top: calc( 74.5rem - calc(74.5rem - 170px - 500px - 300px - 70px));
+  width: 100%;
+  background-color: white;
+}
+
+@media only screen and (max-height: 950px) {
+  .gallery-rulers {
+    top: calc( 74.5rem - calc(74.5rem - 170px - 500px - 30px - 70px));
+  }
+}
+
+.main-ruling {
+  background: url("../images/pope.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  height: 74.5rem;
+  width: 100%;
+  /*
+     * The original .psd had a margin of aprox 130px for a width of 1280px
+     * thus with a conversion we get a 195px for 1920px. Or a 10%.
+     * The same goes for the right margin of the blurred card, the original
+     * margin was (100% - 630px) for 1280, thus we end up with 945px as of 49%,
+     * but this value didn't match the .psd resolution so I modified it to 57%
+     * which seems to work.
+     */
+}
+
+.main-ruling__content {
+  position: relative;
+  top: 170px;
+  left: 10%;
+  width: 39%;
+  height: 500px;
+  background: inherit;
+  overflow: hidden;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-ruling__content:before {
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  background: inherit;
+  -webkit-box-shadow: inset 0 0 2000px 50px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0 0 2000px 50px rgba(0, 0, 0, 0.5);
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+  z-index: -1;
+}
+
+.main-ruling-card {
+  padding: 30px;
+  color: white;
+}
+
+.main-ruling-card__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-ruling-card__question {
+  font-size: 1.3333rem;
+  font-weight: 100;
+}
+
+.main-ruling-card__character {
+  font-size: 5rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.main-ruling-card__summary {
+  font-size: 1.75rem;
+  font-weight: 300;
+  line-height: 24pt;
+}
+
+.main-ruling-card__related {
+  font-size: 1.3333rem;
+  font-weight: 100;
+  margin: 0;
+}
+
+.main-ruling-card__related a {
+  text-decoration: underline;
+}
+
+.main-ruling-card__related a:hover {
+  cursor: pointer;
+}
+
+.main-ruling-card__callout {
+  font-size: 1.3333rem;
+  font-weight: 700;
+  line-height: 24pt;
+}
+
+.main-ruling-actions {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-ruling-actions__upvote {
+  background-color: rgba(28, 187, 180, 0.75);
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding: 20px;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2.6667rem;
+  font-weight: 400;
+}
+
+.main-ruling-actions__downvote {
+  background-color: rgba(255, 173, 29, 0.75);
+  -ms-flex-item-align: center;
+      align-self: center;
+  padding: 20px;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2.6667rem;
+  font-weight: 400;
+}
+
+.main-ruling__remaining-time {
+  position: relative;
+  top: calc(170px + 300px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 70px;
+  width: 100%;
+}
+
+@media only screen and (max-height: 950px) {
+  .main-ruling__remaining-time {
+    top: calc(170px + 30px);
+  }
+}
+
+.main-ruling .remaining-time__label {
+  font-size: 1.3333rem;
+  font-weight: 400;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 28%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-ruling .remaining-time__label span {
+  padding-right: 10px;
+}
+
+.main-ruling .remaining-time__time-left {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-ruling .time-left__separator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  width: 30px;
+}
+
+.main-ruling .time-left__separator div {
+  height: calc(calc(100% / 2) - 11px);
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.main-ruling .time-left__separator--triangle {
+  background-color: transparent !important;
+  border-top: 10px solid rgba(255, 255, 255, 0.7);
+  border-bottom: 10px solid rgba(255, 255, 255, 0.7);
+  border-left: 15px solid rgba(0, 0, 0, 0.1);
+  border-right: 15px solid rgba(255, 255, 255, 0.7);
+  width: 0px;
+  height: 1px;
+}
+
+.main-ruling .time-left__duration {
+  height: 100%;
+  width: calc(100% - 30px);
+  background-color: rgba(255, 255, 255, 0.7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.main-ruling .time-left__duration span {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 2.6667rem;
+  font-weight: 400;
+  color: #464646;
+}
+
 .navbar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -100,15 +372,28 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  padding: 30px 10%;
+  height: 120px;
+  width: 100%;
+  z-index: 10;
+  /* Elements */
+  /* Modifiers */
 }
 
 .navbar__title {
-  font-size: 32pt;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  color: white;
+  font-size: 2.6667rem;
+  font-weight: 400;
 }
 
 .navbar__list {
@@ -129,45 +414,44 @@ button {
 
 .navbar__item {
   text-decoration: none;
-  font-size: 16pt;
-  line-height: 16pt;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  font-size: 1.3333rem;
+  font-weight: 400;
 }
 
 .navbar__item a {
-  color: black;
-  -webkit-transition: 2s;
-  transition: 2s;
+  color: white;
 }
 
 .navbar__item a:visited {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .navbar__item a:focus {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .navbar__item a:hover, .navbar__item a:active {
-  color: black;
+  color: white;
   cursor: pointer;
   text-decoration: underline;
 }
 
-.navbar__item i:hover {
-  cursor: pointer;
+.navbar--transparent {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(51, 51, 51, 0)), to(#333333));
+  background: linear-gradient(0deg, rgba(51, 51, 51, 0) 0%, #333333 100%);
 }
 /*# sourceMappingURL=main.css.map */
