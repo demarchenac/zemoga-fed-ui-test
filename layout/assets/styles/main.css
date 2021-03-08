@@ -237,6 +237,116 @@ p {
   }
 }
 
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer__divider {
+  width: 100%;
+  border-top: 1px dashed #333333;
+}
+
+.footer__contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__contact ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  padding: 0;
+}
+
+.footer__contact ul li {
+  font-size: 0.75rem;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.footer__contact ul li a {
+  color: #333333;
+}
+
+.footer__contact ul li a:visited {
+  text-decoration: none;
+  color: #333333;
+}
+
+.footer__contact ul li a:focus {
+  text-decoration: none;
+  color: #333333;
+}
+
+.footer__contact ul li a:hover, .footer__contact ul li a:active {
+  color: #333333;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.footer__contact ul li i {
+  color: #333333;
+}
+
+.footer__contact--documents {
+  width: 70%;
+}
+
+.footer__contact--documents li {
+  padding-right: 10px;
+}
+
+.footer__contact--social {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  width: 30%;
+}
+
+.footer__contact--social li {
+  padding-left: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer__contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer__contact--documents {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .footer__contact--social {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+    width: 100%;
+  }
+}
+
 .votes {
   width: 100%;
 }
