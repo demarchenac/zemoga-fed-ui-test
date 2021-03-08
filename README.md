@@ -10,4 +10,4 @@ It's published [here](https://zemoga-fed-ui-test-layout.netlify.app/), and you c
 
 ## Interactive
 
-It's published [here](https://zemoga-fed-ui-test-interactive.netlify.app/home), and you can see the layout files [here](https://github.com/demarchenac/zemoga-fed-ui-test/tree/interactive)
+It's published [here](https://zemoga-fed-ui-test-interactive.netlify.app/), and you can see the layout files [here](https://github.com/demarchenac/zemoga-fed-ui-test/tree/interactive)
