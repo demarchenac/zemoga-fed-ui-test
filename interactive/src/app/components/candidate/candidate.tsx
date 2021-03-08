@@ -35,7 +35,6 @@ export const Candidate: React.FC<Props> = ({ candidate, onChange }) => {
 
     function handleSeleccionChange(clicked: 'upvote' | 'downvote') {
         const isUpvote = clicked === 'upvote';
-        console.log(isUpvote);
         setUpvoteSelection(isUpvote);
         setDownvoteSelection(!isUpvote);
     }
