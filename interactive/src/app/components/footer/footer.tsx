@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import './footer.scss';
 
@@ -22,10 +23,10 @@ export const Footer: React.FC<Props> = () => {
                     </ul>
                     <ul className="footer__contact--social">
                         <li>
-                            <i className="fab fa-twitter"></i>
+                            <FontAwesomeIcon icon={['fas', 'twitter']} />
                         </li>
                         <li>
-                            <i className="fab fa-facebook-square"></i>
+                            <FontAwesomeIcon icon={['fas', 'facebook-square']} />
                         </li>
                         <li>Follow Us</li>
                     </ul>
