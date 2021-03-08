@@ -1,0 +1,46 @@
+[
+    {
+        "id": 1,
+        "name": "Kayne West",
+        "imageUrl": "https://res.cloudinary.com/demarchenac/image/upload/v1615225833/static/zemoga/ui-test/kanye_nj9dxl.jpg",
+        "lastUpdate": "1 month ago",
+        "updateArea": "Entertainment",
+        "description": "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.",
+        "upvotes": 64,
+        "downvotes": 36,
+        "votes": []
+    },
+    {
+        "id": 2,
+        "name": "Mark Zuckerberg",
+        "imageUrl": "https://res.cloudinary.com/demarchenac/image/upload/v1615225833/static/zemoga/ui-test/mark_n0zrg0.jpg",
+        "lastUpdate": "1 month ago",
+        "updateArea": "Business",
+        "description": "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.",
+        "upvotes": 36,
+        "downvotes": 64,
+        "votes": []
+    },
+    {
+        "id": 3,
+        "name": "Cristina Fernández de Kirchner",
+        "imageUrl": "https://res.cloudinary.com/demarchenac/image/upload/v1615225834/static/zemoga/ui-test/cristina_gfhwyo.jpg",
+        "lastUpdate": "1 month ago",
+        "updateArea": "Politics",
+        "description": "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.",
+        "upvotes": 36,
+        "downvotes": 64,
+        "votes": []
+    },
+    {
+        "id": 4,
+        "name": "Malala Yousafzai",
+        "imageUrl": "https://res.cloudinary.com/demarchenac/image/upload/v1615225833/static/zemoga/ui-test/malala_d4c7pp.jpg",
+        "lastUpdate": "1 month ago",
+        "updateArea": "Entertainment",
+        "description": "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.",
+        "upvotes": 64,
+        "downvotes": 36,
+        "votes": []
+    }
+]
