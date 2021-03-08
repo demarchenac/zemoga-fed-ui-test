@@ -9,7 +9,7 @@ with the following npx command:
 
 ```
 > npx create-react-app interactive --template typescript
-> yarn add node-sass
+> yarn add sass
 ```
 
 ### Development Environment
