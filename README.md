@@ -16,7 +16,7 @@ The icons were retrieved from [FontAwesome](https://fontawesome.com/how-to-use/o
 
 ## B.E.M.
 
-I followed the [Block Element Modifier (BEM)](https://en.bem.info/methodology/quick-start/) methodology in order to create the styles of the static site.
+I followed the [Block Element Modifier (BEM)](https://en.bem.info/methodology/quick-start/) methodology in order to create the styles of the static site
 
 ## 7 - 1 Sass Architecture
 
