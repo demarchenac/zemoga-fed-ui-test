@@ -1,7 +1,0 @@
-@import '../abstracts/variables';
-
-.vertical-spacer {
-	width: 100%;
-	height: 100px;
-	color: map-get($map: $COLORS, $key: 'background');
-}
