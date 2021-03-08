@@ -17,12 +17,14 @@ $FONT_SIZES: (
 
 $COLORS: (
 	'upvote': rgb(28, 187, 180),
+	'upvote-darker': rgb(31, 209, 201),
 	'downvote': rgb(255, 173, 29),
+	'downvote-darker': rgb(255, 182, 55),
 	'text': rgb(255, 255, 255),
 	'background': rgb(255, 255, 255),
 );
 
-$COLOR_OPACITY: 0.75;
+$COLOR_OPACITY: 0.7;
 
 $COLORS_WITH_APLHA: (
 	'upvote': rgba(28, 187, 180, $COLOR_OPACITY),

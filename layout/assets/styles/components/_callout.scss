@@ -1,9 +1,8 @@
 @import '../abstracts/variables';
 
 .callout {
-	margin: 70px $PAGE_SPACER;
-	width: calc(100% - #{$PAGE_SPACER} * 2);
-	height: 300px;
+	margin: 70px 0;
+	width: 100%;
 
 	&__content {
 		position: relative;

@@ -9,34 +9,30 @@
 	position: absolute;
 	top: 0;
 	padding: 30px $PAGE_SPACER;
-	height: 120px;
 	width: 100%;
 	z-index: 10;
 
 	/* Elements */
 	&__title {
-		flex-basis: 100%;
-		flex: 1;
 		color: map-get($map: $COLORS, $key: 'text');
+		width: 50%;
 		@include adapt-font('lg', 'regular');
 	}
 
 	&__list {
+		width: 50%;
 		list-style: none;
-
 		display: flex;
 		flex-direction: row;
-		flex-basis: 100%;
-		flex: 1;
+		justify-content: space-evenly;
+		padding: 0;
 	}
 
 	&__item {
 		text-decoration: none;
 		display: flex;
 		flex-direction: row-reverse;
-		flex-basis: 100%;
-		flex: 1;
-
+		margin-left: 10px;
 		@include adapt-font('sm', 'regular');
 
 		a {
@@ -64,5 +60,31 @@
 	/* Modifiers */
 	&--transparent {
 		background: map-get($map: $GRANDIENT, $key: 'down');
+	}
+
+	@media only screen and (max-width: 550px) {
+		&__title {
+			text-align: center;
+			width: 100%;
+			@include adapt-font('md', 'bold');
+		}
+
+		&__list {
+			width: 100%;
+		}
+
+		&__item {
+			@include adapt-font('xs', 'bold');
+		}
+	}
+	@media only screen and (max-width: 1100px) {
+		&__title {
+			text-align: center;
+			width: 100%;
+		}
+
+		&__list {
+			width: 100%;
+		}
 	}
 }

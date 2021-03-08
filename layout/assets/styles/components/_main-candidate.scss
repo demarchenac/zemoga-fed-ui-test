@@ -1,0 +1,262 @@
+@import '../abstracts/variables';
+
+.main-candidate {
+	background: url('../images/pope.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	height: $IMAGE_SIZE;
+	width: 100%;
+
+	&__content-wrapper {
+		position: relative;
+		margin: 0 auto;
+		max-width: 1085px;
+		padding: 0 30px;
+		padding-top: 170px;
+		background: inherit;
+	}
+
+	&__remaining-time {
+		position: absolute;
+		display: flex;
+		height: 70px;
+		width: 100%;
+		bottom: 0;
+		z-index: 100;
+	}
+
+	/*
+     * The original .psd had a margin of aprox 130px for a width of 1280px
+     * thus with a conversion we get a 195px for 1920px. Or a 10%.
+     * The same goes for the right margin of the blurred card, the original
+     * margin was (100% - 630px) for 1280, thus we end up with 945px as of 49%,
+     * but this value didn't match the .psd resolution so I modified it to 57%
+     * which seems to work.
+     */
+	&__content {
+		position: relative;
+		margin: 0;
+		max-width: 500px;
+		width: 100%;
+		background: inherit;
+		overflow: hidden;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+
+		&:before {
+			content: '';
+			top: -70px;
+			left: -70px;
+			right: -70px;
+			bottom: -70px;
+			position: absolute;
+			background: inherit;
+			box-shadow: inset 0 0 0 3000px rgba(0, 0, 0, 0.5);
+			filter: blur(3rem);
+			z-index: -1;
+		}
+	}
+
+	&__card {
+		color: map-get($map: $COLORS, $key: 'text');
+	}
+}
+
+.main-candidate-card {
+	&__content {
+		padding: 30px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__actions {
+		position: relative;
+		bottom: 0;
+		max-width: 500px;
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+
+		&--upvote {
+			cursor: pointer;
+			background-color: map-get($map: $COLORS_WITH_APLHA, $key: 'upvote');
+			align-self: flex-end;
+			padding: 20px;
+			width: 50%;
+			display: flex;
+			justify-content: center;
+			transition: 0.5s;
+			@include adapt-font('lg', 'regular');
+
+			&:hover {
+				background-color: map-get($map: $COLORS, $key: 'upvote-darker');
+			}
+		}
+
+		&--downvote {
+			cursor: pointer;
+			background-color: map-get(
+				$map: $COLORS_WITH_APLHA,
+				$key: 'downvote'
+			);
+			align-self: center;
+			padding: 20px;
+			width: 50%;
+			display: flex;
+			justify-content: center;
+			transition: 0.5s;
+			@include adapt-font('lg', 'regular');
+
+			&:hover {
+				background-color: map-get(
+					$map: $COLORS,
+					$key: 'downvote-darker'
+				);
+			}
+		}
+	}
+}
+
+.main-candidate-card-content {
+	&__question {
+		@include adapt-font('sm', 'thin');
+	}
+
+	&__character {
+		@include adapt-font('xl', 'regular');
+		margin: 0;
+	}
+
+	&__summary {
+		@include adapt-font('md', 'light');
+		line-height: 24pt;
+	}
+
+	&__related {
+		@include adapt-font('sm', 'thin');
+		margin: 30px 0;
+
+		a {
+			text-decoration: underline;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+
+	&__callout {
+		@include adapt-font('sm', 'bold');
+		line-height: 24pt;
+		margin-top: 20px;
+	}
+
+	@media only screen and (max-width: 520px) {
+		&__question {
+			@include adapt-font('sm', 'thin');
+		}
+
+		&__character {
+			@include adapt-font('md', 'regular');
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+
+		&__summary {
+			@include adapt-font('sm', 'light');
+			line-height: 24pt;
+		}
+
+		&__related {
+			@include adapt-font('xs', 'thin');
+			margin: 30px 0;
+
+			a {
+				text-decoration: underline;
+
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+
+		&__callout {
+			@include adapt-font('sm', 'bold');
+			line-height: 24pt;
+			margin-top: 20px;
+		}
+	}
+}
+
+.main-candidate-remaining-time {
+	&__label {
+		@include adapt-font('sm', 'regular');
+		color: white;
+		background-color: rgba(0, 0, 0, 0.1);
+		width: 28%;
+		height: 100%;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+
+		span {
+			padding-right: 10px;
+		}
+	}
+
+	&__time-left {
+		width: 100%;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+	@media only screen and (max-width: 545px) {
+		&__label {
+			@include adapt-font('xs', 'regular');
+		}
+	}
+}
+
+.main-candidate-remaining-time-time-left {
+	&__separator {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		width: 30px;
+
+		div {
+			height: calc(calc(100% / 2) - 11px);
+			width: 100%;
+			background-color: rgba(255, 255, 255, 0.7);
+		}
+
+		&--triangle {
+			background-color: transparent !important;
+			border-top: 10px solid rgba(255, 255, 255, 0.7);
+			border-bottom: 10px solid rgba(255, 255, 255, 0.7);
+			border-left: 15px solid rgba(0, 0, 0, 0.1);
+			border-right: 15px solid rgba(255, 255, 255, 0.7);
+			width: 0px;
+			height: 1px;
+		}
+	}
+
+	&__duration {
+		height: 100%;
+		width: calc(100% - 30px);
+		background-color: rgba(255, 255, 255, 0.7);
+		display: flex;
+		align-self: center;
+
+		span {
+			align-self: center;
+			@include adapt-font('lg', 'regular');
+			color: #464646;
+		}
+	}
+}

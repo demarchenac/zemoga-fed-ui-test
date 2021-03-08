@@ -1,18 +1,10 @@
 @import '../abstracts/variables';
 
-.parallax {
-	position: absolute;
-	top: calc(
-		#{$IMAGE_SIZE} - calc(#{$IMAGE_SIZE} - #{$CARD_SPACER} - #{$CARD_HEIGHT} -
-					#{$REMAINING_TIME_SPACER} - #{$REMAINING_TIME_HEIGHT})
-	);
+.wrapper {
+	position: relative;
+	margin: auto;
+	padding: 0 30px;
+	max-width: 1085px;
 	width: 100%;
 	background-color: map-get($map: $COLORS, $key: 'background');
-
-	@media only screen and (max-height: 950px) {
-		top: calc(
-			#{$IMAGE_SIZE} - calc(#{$IMAGE_SIZE} - #{$CARD_SPACER} - #{$CARD_HEIGHT} -
-						#{$REMAINING_TIME_SPACER_MINI} - #{$REMAINING_TIME_HEIGHT})
-		);
-	}
 }
