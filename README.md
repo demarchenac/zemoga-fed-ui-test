@@ -4,7 +4,7 @@ UI test @ Zemoga
 
 ## Published
 
-See it [here](https://zemoga-fed-ui-test.netlify.app/)
+See it [here](https://zemoga-fed-ui-test-layout.netlify.app/)
 
 ## Image optimization
 
