@@ -1,9 +1,5 @@
 # Zemoga UI FED Test
 
-UI test @ Zemoga
-
-# Zemoga UI FED Test
-
 [UI test](https://github.com/zemoga/ui-test) @ Zemoga.
 
 The test consist on two main components, a layout component (HTML & CSS only), and an interactive component (I used Create React App here).
