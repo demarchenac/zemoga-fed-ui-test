@@ -4,6 +4,7 @@ import './candidate-gallery.scss';
 import { Candidate } from '../candidate/candidate';
 import { ICandidate } from '../../../types';
 import { StorageService } from '../../../services';
+import { NewCandidate } from '../new-candidate/new-candidate';
 
 interface Props {}
 
@@ -38,14 +39,8 @@ export const CandidateGallery: React.FC<Props> = () => {
         <section className="votes">
             <h2 className="votes__title">Votes</h2>
             <div className="votes__gallery">{renderCandidates()}</div>
-
             <div className="votes__new-candiate">
-                <div className="new-candidate__content">
-                    <h3 className="new-candidate__title">Is there anyone else you would want us to add?</h3>
-                    <div className="new-candidate__submit">
-                        <span>Submit a name</span>
-                    </div>
-                </div>
+                <NewCandidate />
             </div>
         </section>
     );

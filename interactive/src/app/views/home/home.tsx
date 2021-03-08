@@ -1,5 +1,5 @@
 import React from 'react';
-import { Callout, CandidateGallery, ContentWrapper, MainCandidate } from '../../components';
+import { Callout, CandidateGallery, ContentWrapper, Footer, MainCandidate } from '../../components';
 
 interface Props {}
 
@@ -10,6 +10,7 @@ export const Home: React.FC<Props> = () => {
             <ContentWrapper>
                 <Callout />
                 <CandidateGallery />
+                <Footer />
             </ContentWrapper>
         </>
     );
