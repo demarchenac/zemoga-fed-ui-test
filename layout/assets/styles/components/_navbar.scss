@@ -59,7 +59,7 @@
 
 	/* Modifiers */
 	&--transparent {
-		background: map-get($map: $GRANDIENT, $key: 'down');
+		background: map-get($map: $GRADIENTS, $key: 'down');
 	}
 
 	@media only screen and (max-width: 550px) {

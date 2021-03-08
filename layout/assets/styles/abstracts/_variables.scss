@@ -21,6 +21,7 @@ $COLORS: (
 	'downvote': rgb(255, 173, 29),
 	'downvote-darker': rgb(255, 182, 55),
 	'text': rgb(255, 255, 255),
+	'text-negative': rgb(0, 0, 0),
 	'background': rgb(255, 255, 255),
 );
 
@@ -38,14 +39,14 @@ $DOWNWARD_GRADIENT: linear-gradient(
 );
 
 $UPWARD_GRADIENT: linear-gradient(
-	180deg,
-	rgba(0, 0, 0, 0) 100%,
+	0deg,
+	rgba(0, 0, 0, 0.7) 0%,
+	rgba(0, 0, 0, 0.6) 38%,
 	rgba(0, 0, 0, 0) 75%,
-	rgba(0, 0, 0, 0.61) 38%,
-	rgba(0, 0, 0, 0.71) 0%
+	rgba(0, 0, 0, 0) 100%
 );
 
-$GRANDIENT: (
+$GRADIENTS: (
 	'up': $UPWARD_GRADIENT,
 	'down': $DOWNWARD_GRADIENT,
 );
