@@ -13,7 +13,7 @@ export const CandidateGallery: React.FC<Props> = () => {
 
     useEffect(() => {
         handleCandidateChange();
-    }, []);
+    });
 
     function renderCandidates() {
         return candidates.map((candidate) => (
