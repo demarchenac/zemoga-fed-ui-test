@@ -1,0 +1,68 @@
+$DEFAULT_FONT_SIZE: 62.5%;
+
+$FONT-WEIGHTS: (
+	'bold': 700,
+	'regular': 400,
+	'light': 300,
+	'thin': 100,
+);
+
+/*
+ * These sizes were extracted from the .psd comp file:
+ *   xs: 9pt
+ *   sm: 16pt
+ *   md: 21pt
+ *   lg: 31pt
+ *   xl: 60pt
+ */
+$FONT_SIZES: (
+	'xs': 0.75rem,
+	'sm': 1.3333rem,
+	'md': 1.75rem,
+	'lg': 2.6667rem,
+	'xl': 5rem,
+);
+
+$COLORS: (
+	'upvote': rgb(28, 187, 180),
+	'upvote-darker': rgb(31, 209, 201),
+	'downvote': rgb(255, 173, 29),
+	'downvote-darker': rgb(255, 182, 55),
+	'text': rgb(255, 255, 255),
+	'text-negative': rgb(51, 51, 51),
+	'background': rgb(255, 255, 255),
+);
+
+$COLOR_OPACITY: 0.7;
+
+$COLORS_WITH_APLHA: (
+	'upvote': rgba(28, 187, 180, $COLOR_OPACITY),
+	'downvote': rgba(255, 173, 29, $COLOR_OPACITY),
+);
+
+$DOWNWARD_GRADIENT: linear-gradient(
+	0deg,
+	rgba(51, 51, 51, 0) 0%,
+	rgba(51, 51, 51, 1) 100%
+);
+
+$UPWARD_GRADIENT: linear-gradient(
+	0deg,
+	rgba(0, 0, 0, 0.7) 0%,
+	rgba(0, 0, 0, 0.6) 38%,
+	rgba(0, 0, 0, 0) 75%,
+	rgba(0, 0, 0, 0) 100%
+);
+
+$GRADIENTS: (
+	'up': $UPWARD_GRADIENT,
+	'down': $DOWNWARD_GRADIENT,
+);
+
+$IMAGE_SIZE: 74.5rem;
+$CARD_SPACER: 170px;
+$CARD_HEIGHT: 500px;
+$REMAINING_TIME_SPACER: 300px;
+$REMAINING_TIME_SPACER_MINI: 30px;
+$REMAINING_TIME_HEIGHT: 70px;
+$PAGE_SPACER: 10%;

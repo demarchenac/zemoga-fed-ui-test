@@ -1,13 +1,57 @@
+@import './assets/styles/abstracts/variables';
+@import './assets/styles/base/typography';
+
+html,
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    background: transparent;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    margin: 0;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+a {
+    color: map-get($map: $COLORS, $key: 'text');
+    text-decoration: none;
+
+    &:visited {
+        text-decoration: none;
+        color: map-get($map: $COLORS, $key: 'text');
+    }
+
+    &:focus {
+        text-decoration: none;
+        color: map-get($map: $COLORS, $key: 'text');
+    }
+
+    &:hover,
+    &:active {
+        color: map-get($map: $COLORS, $key: 'text');
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
+
+svg:hover {
+    cursor: pointer;
+}
+
+* {
+    box-sizing: border-box;
 }
