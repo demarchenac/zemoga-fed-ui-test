@@ -12,8 +12,8 @@ export const CandidateGallery: React.FC<Props> = () => {
     const [candidates, setCandidates] = useState<ICandidate[]>([]);
 
     useEffect(() => {
-        handleCandidateChange();
-    });
+        setCandidates(StorageService.getCandidates());
+    }, []);
 
     function renderCandidates() {
         return candidates.map((candidate) => (
@@ -21,17 +21,15 @@ export const CandidateGallery: React.FC<Props> = () => {
                 candidate={candidate}
                 key={candidate.id}
                 onChange={() => {
-                    handleCandidateChange(true);
+                    handleCandidateChange();
                 }}
             />
         ));
     }
 
-    function handleCandidateChange(update: boolean = false) {
-        if (update) StorageService.setCandidates(candidates);
+    function handleCandidateChange() {
+        StorageService.setCandidates(candidates);
         const _candidates: ICandidate[] = StorageService.getCandidates();
-        console.log('kelly');
-        console.log(_candidates);
         setCandidates(_candidates);
     }
 
