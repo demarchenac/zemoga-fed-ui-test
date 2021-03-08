@@ -72,3 +72,7 @@ I defined the followig interface in order to structure the data of a candidate:
 ### Image Storage
 
 Finally I uploaded the image files to [cloudinary](https://cloudinary.com/) in order to have more of a real life web app flow when retrieving information.
+
+### To Add
+
+-   **Testing:** I would probably handle this part of the development process with _mocha & chai_ or with _testing-library_, I think that any of these tools would generate great tests.
