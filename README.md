@@ -4,7 +4,7 @@
 
 ## Published
 
-See it [here](https://zemoga-fed-ui-test-interactive.netlify.app/home)
+See it [here](https://zemoga-fed-ui-test-interactive.netlify.app)
 
 ## React Setup
 
