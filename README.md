@@ -1,23 +1,13 @@
 # Zemoga FED UI Test
 
-UI test @ Zemoga
+[UI test](https://github.com/zemoga/ui-test) @ Zemoga.
 
-## Published
+The test consist on two main components, a layout component (HTML & CSS only), and an interactive component (I used Create React App here).
 
-See it [here](https://zemoga-fed-ui-test-layout.netlify.app/)
+## Layout
 
-## Image optimization
+It's published [here](https://zemoga-fed-ui-test-layout.netlify.app/), and you can see the layout files [here](https://github.com/demarchenac/zemoga-fed-ui-test/tree/layout).
 
-Images were optimized using panda from [tinypng](https://tinypng.com/)
+## Interactive
 
-## Icons
-
-The icons were retrieved from [FontAwesome](https://fontawesome.com/how-to-use/on-the-web/setup/hosting-font-awesome-yourself#using-web-fonts)
-
-## B.E.M.
-
-I followed the [Block Element Modifier (BEM)](https://en.bem.info/methodology/quick-start/) methodology in order to create the styles of the static site
-
-## 7 - 1 Sass Architecture
-
-I defined the folder structure for the styles following the principles from [Sass Guidelines](https://sass-guidelin.es/#architecture)
+It's published [here](https://zemoga-fed-ui-test-interactive.netlify.app/home), and you can see the layout files [here](https://github.com/demarchenac/zemoga-fed-ui-test/tree/interactive).
