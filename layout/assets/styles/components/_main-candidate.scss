@@ -26,14 +26,6 @@
 		z-index: 100;
 	}
 
-	/*
-     * The original .psd had a margin of aprox 130px for a width of 1280px
-     * thus with a conversion we get a 195px for 1920px. Or a 10%.
-     * The same goes for the right margin of the blurred card, the original
-     * margin was (100% - 630px) for 1280, thus we end up with 945px as of 49%,
-     * but this value didn't match the .psd resolution so I modified it to 57%
-     * which seems to work.
-     */
 	&__content {
 		position: relative;
 		margin: 0;

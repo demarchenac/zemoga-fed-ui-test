@@ -119,10 +119,12 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.content__title {
-  width: 20%;
+.callout-content__title {
+  width: 30%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -133,20 +135,20 @@ p {
           flex-direction: column;
 }
 
-.content__description {
-  width: 75%;
+.callout-content__description {
+  width: 65%;
   height: 100%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
 }
 
-.content__description p {
+.callout-content__description p {
   font-size: 1.3333rem;
   font-weight: 400;
 }
 
-.content__close {
+.callout-content__close {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -160,29 +162,105 @@ p {
       align-self: center;
 }
 
-.content__close span {
+.callout-content__close span {
   cursor: pointer;
   font-size: 1.75rem;
   font-weight: 400;
 }
 
-.title__sub-heading h3 {
+.callout-content-title__sub-heading h3 {
   font-size: 1.75rem;
   font-weight: 300;
 }
 
-.title__heading h3 {
+.callout-content-title__heading h3 {
   font-size: 2.6667rem;
   font-weight: 700;
 }
 
-.wrapper {
-  position: relative;
-  margin: auto;
-  padding: 0 30px;
-  max-width: 1085px;
+@media only screen and (max-width: 975px) {
+  .callout-content__description p {
+    font-size: 0.75rem;
+    font-weight: 400;
+  }
+  .callout-content-title__sub-heading h3 {
+    font-size: 1.3333rem;
+    font-weight: 400;
+  }
+  .callout-content-title__heading h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .callout__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .callout-content__title {
+    width: 100%;
+    text-align: center;
+  }
+  .callout-content__description {
+    margin-top: 30px;
+    width: 100%;
+  }
+  .callout-content__close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .callout-content__close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    height: auto;
+  }
+  .callout-content__close span {
+    font-size: 0.75rem;
+    font-weight: 400;
+  }
+  .callout-content-title__sub-heading h3 {
+    font-size: 0.75rem;
+    font-weight: 400;
+  }
+  .callout-content-title__heading h3 {
+    font-size: 1.3333rem;
+    font-weight: 700;
+  }
+}
+
+.votes {
   width: 100%;
-  background-color: white;
+}
+
+.votes__gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.gallery__candidate {
+  margin-top: 30px;
+  width: 492px;
+  height: 550px;
+  background-color: aquamarine;
 }
 
 .main-candidate {
@@ -192,14 +270,6 @@ p {
   position: relative;
   height: 74.5rem;
   width: 100%;
-  /*
-     * The original .psd had a margin of aprox 130px for a width of 1280px
-     * thus with a conversion we get a 195px for 1920px. Or a 10%.
-     * The same goes for the right margin of the blurred card, the original
-     * margin was (100% - 630px) for 1280, thus we end up with 945px as of 49%,
-     * but this value didn't match the .psd resolution so I modified it to 57%
-     * which seems to work.
-     */
 }
 
 .main-candidate__content-wrapper {
@@ -611,29 +681,12 @@ p {
   }
 }
 
-.votes {
+.wrapper {
+  position: relative;
+  margin: auto;
+  padding: 0 30px;
+  max-width: 1085px;
   width: 100%;
-}
-
-.votes__gallery {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.gallery__candidate {
-  margin-top: 30px;
-  width: 492px;
-  height: 550px;
-  background-color: aquamarine;
+  background-color: white;
 }
 /*# sourceMappingURL=main.css.map */

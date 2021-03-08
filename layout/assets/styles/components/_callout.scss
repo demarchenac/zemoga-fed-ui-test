@@ -10,18 +10,19 @@
 		background-color: rgb(235, 235, 235);
 		display: flex;
 		flex-direction: row;
+		flex-wrap: wrap;
 	}
 }
 
-.content {
+.callout-content {
 	&__title {
-		width: 20%;
+		width: 30%;
 		height: 100%;
 		display: flex;
 		flex-direction: column;
 	}
 	&__description {
-		width: 75%;
+		width: 65%;
 		height: 100%;
 		align-self: center;
 		p {
@@ -43,7 +44,7 @@
 	}
 }
 
-.title {
+.callout-content-title {
 	&__sub-heading {
 		h3 {
 			@include adapt-font('md', 'light');
@@ -52,6 +53,82 @@
 	&__heading {
 		h3 {
 			@include adapt-font('lg', 'bold');
+		}
+	}
+}
+
+@media only screen and (max-width: 975px) {
+	.callout-content {
+		&__description {
+			p {
+				@include adapt-font('xs', 'regular');
+			}
+		}
+	}
+
+	.callout-content-title {
+		&__sub-heading {
+			h3 {
+				@include adapt-font('sm', 'regular');
+			}
+		}
+		&__heading {
+			h3 {
+				@include adapt-font('md', 'bold');
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.callout {
+		&__content {
+			flex-direction: column;
+		}
+	}
+
+	.callout-content {
+		&__title {
+			width: 100%;
+			text-align: center;
+		}
+
+		&__description {
+			margin-top: 30px;
+			width: 100%;
+		}
+		&__close {
+			position: absolute;
+			top: 30px;
+			right: 30px;
+			height: auto;
+		}
+	}
+}
+
+@media only screen and (max-width: 360px) {
+	.callout-content {
+		&__close {
+			position: absolute;
+			top: 30px;
+			right: 30px;
+			height: auto;
+			span {
+				@include adapt-font('xs', 'regular');
+			}
+		}
+	}
+
+	.callout-content-title {
+		&__sub-heading {
+			h3 {
+				@include adapt-font('xs', 'regular');
+			}
+		}
+		&__heading {
+			h3 {
+				@include adapt-font('sm', 'bold');
+			}
 		}
 	}
 }
