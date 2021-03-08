@@ -75,4 +75,4 @@ Finally I uploaded the image files to [cloudinary](https://cloudinary.com/) in o
 
 ### To Add
 
--   **Testing:** I would probably handle this part of the development process with _mocha & chai_ or with _testing-library_, I think that any of these tools would generate great tests.
+-   **Testing:** I would probably handle this part of the development process with _mocha & chai_ or with _testing-library & jest_, I think that any of these tools would generate great tests.
