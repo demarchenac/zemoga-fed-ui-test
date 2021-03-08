@@ -23,10 +23,10 @@ export const Footer: React.FC<Props> = () => {
                     </ul>
                     <ul className="footer__contact--social">
                         <li>
-                            <FontAwesomeIcon icon={['fas', 'twitter']} />
+                            <FontAwesomeIcon icon={['fab', 'twitter']} />
                         </li>
                         <li>
-                            <FontAwesomeIcon icon={['fas', 'facebook-square']} />
+                            <FontAwesomeIcon icon={['fab', 'facebook-square']} />
                         </li>
                         <li>Follow Us</li>
                     </ul>
