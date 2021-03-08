@@ -103,6 +103,10 @@
 			transition: 0.5s;
 			@include adapt-font('lg', 'regular');
 
+			i {
+				transform: rotateY(180deg);
+			}
+
 			&:hover {
 				background-color: map-get(
 					$map: $COLORS,
