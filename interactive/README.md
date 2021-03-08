@@ -1,8 +1,4 @@
-# Zemoga UI FED Test
-
-UI test @ Zemoga
-
-## React Setup
+# React Setup
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 with the following npx command:
@@ -12,7 +8,7 @@ with the following npx command:
 > yarn add node-sass
 ```
 
-### Development Environment
+## Development Environment
 
 To run this project in a development enviroment open a terminal inside _./interactive_ and run:
 
