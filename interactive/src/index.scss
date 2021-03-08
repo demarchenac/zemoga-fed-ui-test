@@ -55,3 +55,11 @@ svg:hover {
 * {
     box-sizing: border-box;
 }
+
+.toast-notification-upvote {
+    background-color: map-get($map: $COLORS_WITH_APLHA, $key: 'upvote') !important;
+}
+
+.toast-notification-downvote {
+    background-color: map-get($map: $COLORS_WITH_APLHA, $key: 'downvote') !important;
+}

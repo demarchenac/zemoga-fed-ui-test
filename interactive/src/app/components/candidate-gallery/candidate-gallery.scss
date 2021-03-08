@@ -1,0 +1,49 @@
+@import '../../../assets/styles/abstracts/mixins';
+
+.votes {
+    margin: auto;
+    margin-top: 70px;
+    width: 100%;
+
+    &__title {
+        @include adapt-font('lg', 'light');
+    }
+
+    &__gallery {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__new-candiate {
+        position: relative;
+        width: 100%;
+        margin: 70px auto;
+        box-shadow: inset 0 0 0 3000px rgba(255, 255, 255, 0.85);
+        background: url('https://res.cloudinary.com/demarchenac/image/upload/v1615225833/static/zemoga/ui-test/add_nrgrmx.jpg');
+        background-size: cover;
+        background-position-y: 350px;
+        background-attachment: fixed;
+        display: flex;
+        padding: 30px;
+    }
+}
+
+.gallery {
+    &__candidate {
+        margin-top: 30px;
+        width: 492px;
+        height: 550px;
+        background-position: right;
+        position: relative;
+    }
+}
+
+@media only screen and (max-width: 1060px) {
+    .votes {
+        &__gallery {
+            justify-content: center;
+        }
+    }
+}

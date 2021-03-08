@@ -10,6 +10,10 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 
+// Toasts.
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import { ClientRouter } from './views/router';
 
 library.add(fab, fas, far);
@@ -19,8 +23,8 @@ function App() {
         <div className="App">
             <BrowserRouter>
                 <ClientRouter></ClientRouter>
-                {/* <ToastContainer /> */}
             </BrowserRouter>
+            <ToastContainer newestOnTop />
         </div>
     );
 }
