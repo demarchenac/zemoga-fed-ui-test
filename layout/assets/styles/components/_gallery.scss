@@ -15,6 +15,16 @@
 	}
 
 	&__new-candiate {
+		position: relative;
+		width: 100%;
+		margin: 70px auto;
+		box-shadow: inset 0 0 0 3000px rgba(255, 255, 255, 0.85);
+		background: url(../images/add.jpg);
+		background-size: cover;
+		background-position-y: 350px;
+		background-attachment: fixed;
+		display: flex;
+		padding: 30px;
 	}
 }
 
